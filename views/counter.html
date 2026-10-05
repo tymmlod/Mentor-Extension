@@ -1,21 +1,38 @@
 <!doctype html>
-
-<html>
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
+    <title>Compteur</title>
     <link rel="stylesheet" href="../styles/counter.css" />
-    <script type = "text/javascript" src="../scripts/counter.js"></script>
+    <script src="../scripts/counter.js" defer></script>
   </head>
   <body>
     <div id="popup-content">
       <div class="counter">
         <h2 id="nbEh_Text">Nombre de "Eh"</h2>
         <h3 id="nbEh">0</h3>
-        <button id="nbEh_Button" class="inc_button" >+</button>
+        <button id="nbEh_Button" class="inc_button" type="button">+</button>
       </div>
 
-      <button id="reset_Button" class="reinit">Reinitialize</button>
+      <button id="reset_Button" class="reinit" type="button">Reinitialize</button>
+
+      <hr />
+
+      <button id="save_Button" class="save_button" type="button">Sauvegarder</button>
+
+      <div id="save_Form" hidden>
+        <input id="nom_Input" type="text" placeholder="Nom" />
+        <input id="prenom_Input" type="text" placeholder="Pr&eacute;nom" />
+        <div>
+          <button id="confirm_Button" type="button">Valider</button>
+          <button id="cancel_Button" type="button">Annuler</button>
+        </div>
+        <p id="error_Message" class="error"></p>
+      </div>
+
+      <ul id="saves_List"></ul>
     </div>
-    <script src="../scripts/Counter.js"></script>
   </body>
 </html>
+<!-- ajout sauvegarde nom/prenom -->
+<!-- il y avait deux import du script counter.js -->
